@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ley 64 del 2012 - Panamá</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter', sans-serif;
+    background:#fdfcf9;
+    color:#3a3a3a;
+    line-height:1.8;
+}
+
+/* HEADER */
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    background:#ffffff;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #eee5da;
+    z-index:1000;
+}
+
+header strong{
+    font-family:'Playfair Display', serif;
+    font-size:18px;
+    color:#6b4f3b;
+}
+
+nav a{
+    text-decoration:none;
+    color:#3a3a3a;
+    margin-left:25px;
+    font-size:14px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#d4a373;
+}
+
+/* SECTIONS */
+section{
+    padding:140px 8% 90px 8%;
+}
+
+/* HOME */
+.home{
+    background:#f5efe6;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+}
+
+.home-container{
+    display:flex;
+    flex-direction:column;
+}
+
+.home h1{
+    font-family:'Playfair Display', serif;
+    font-size:34px;
+    color:#6b4f3b;
+}
+
+.home p{
+    margin-top:25px;
+    font-size:16px;
+    max-width:650px;
+    color:#555;
+}
+
+.hero-img{
+    width:320px;
+    margin-top:40px;
+    border-radius:12px;
+    box-shadow:0 20px 50px rgba(0,0,0,0.08);
+}
+
+/* INDEX */
+.index{
+    background:#ffffff;
+    border-radius:12px;
+    padding:35px;
+    border:1px solid #eee5da;
+    box-shadow:0 8px 25px rgba(0,0,0,0.04);
+}
+
+.index h2{
+    font-family:'Playfair Display', serif;
+    color:#6b4f3b;
+    margin-bottom:20px;
+}
+
+.index a{
+    display:block;
+    margin:12px 0;
+    color:#6b4f3b;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.index a:hover{
+    color:#d4a373;
+}
+
+/* TITLE SECTIONS */
+.title-section{
+    margin-top:40px;
+}
+
+.title-section h2{
+    font-family:'Playfair Display', serif;
+    font-size:26px;
+    margin-bottom:25px;
+    color:#6b4f3b;
+    border-left:4px solid #d4a373;
+    padding-left:12px;
+}
+
+/* ACCORDION */
+.accordion{
+    background:#ffffff;
+    border-radius:10px;
+    margin-bottom:15px;
+    border:1px solid #eee5da;
+    overflow:hidden;
+}
+
+.accordion-header{
+    padding:18px 22px;
+    cursor:pointer;
+    font-weight:600;
+    background:#faf6f0;
+    transition:0.3s;
+}
+
+.accordion-header:hover{
+    background:#f0e6d8;
+}
+
+.accordion-content{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.4s ease;
+    padding:0 22px;
+    font-size:15px;
+    color:#555;
+}
+
+.accordion-content p{
+    padding:20px 0;
+}
+
+/* FOOTER */
+footer{
+    background:#f5efe6;
+    padding:40px;
+    text-align:center;
+    color:#6b4f3b;
+    border-top:1px solid #eee5da;
+}
+
+/* DESKTOP */
+@media(min-width:900px){
+
+.home-container{
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.hero-img{
+    width:380px;
+    margin-top:0;
+}
+
+.home h1{
+    font-size:50px;
+}
+
+}
+
+footer{
+    background:#f5efe6;
+    border-top:1px solid #eee5da;
+    padding:40px 8%;
+}
+
+.footer-container{
+    display:flex;
+    align-items:center;
+    justify-content:center; /* centrado */
+    text-align:center;
+    gap:8px; /* menos separación */
+}
+
+.footer-logo{
+    width:80px; /* un poco más compacto */
+    height:auto;
+}
+
+.footer-text{
+    margin:0; /* elimina espacios extra */
+}
+
+.footer-text h3{
+    font-family:'Playfair Display', serif;
+    color:#6b4f3b;
+    margin-bottom:6px; /* menos espacio */
+}
+
+.footer-text p{
+    font-size:14px;
+    color:#555;
+    margin:2px 0; /* más compacto */
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+.footer-container{
+    flex-direction:column;
+    gap:10px;
+}
+
+.footer-logo{
+    height:30px;
+    width:auto;
+    object-fit:contain;
+}
+
+}
+
+.ejemplo-box{
+    background:#faf6f0;
+    border-left:4px solid #d4a373;
+    padding:20px 25px;
+    margin-top:25px;
+    border-radius:8px;
+}
+
+.ejemplo-box h3{
+    font-family:'Playfair Display', serif;
+    font-size:18px;
+    color:#6b4f3b;
+    margin-bottom:10px;
+}
+
+.ejemplo-box p{
+    font-size:15px;
+    color:#555;
+}
+
+.ejemplo-lista{
+    margin-top:10px;
+    padding-left:20px;
+    color:#555;
+}
+
+.ejemplo-lista li{
+    margin-bottom:6px;
+}
+.ejemplo-img{
+    width:100%;
+    max-height:300px;
+    object-fit:cover;
+    border-radius:10px;
+    margin:15px 0 20px 0;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <strong>Ley 64 del 2012</strong>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#indice">Índice</a>
+        <a href="#titulo1">Desarrollo</a>
+    </nav>
+</header>
+
+<!-- HOME -->
+<section class="home" id="home">
+    <div class="home-container">
+        <div>
+            <h1>Rubén Blades y el uso no autorizado de su música</h1>
+            <p>
+                El caso del salsero en 2025 resalta los riesgos de no proteger la propiedad intelectual. En Panamá, la Ley 64 de 2012 —específicamente su Título XI (Arts. 143-149)— impone multas y cárcel por el uso no autorizado de obras. Para no perder el control sobre tus creaciones bajo los términos del Título IV, Cap. 1 y el Título VI, Cap. 2, es fundamental registrar y asegurar tus derechos a tiempo.
+            </p>
+        </div>
+
+        <img src="inicio.jpg" alt="Rubén Blades" class="hero-img">
+    </div>
+</section>
+
+<!-- ÍNDICE -->
+<section id="indice">
+    <div class="index">
+        <h2>Índice</h2>
+        <a href="#titulo1">Título IV – Disposiciones especiales para ciertas obras</a>
+        <a href="#titulo2">Título VI – Duración del derecho de autor y límites al derecho patrimonial</a>
+        <a href="#titulo3">Título XI – Observancia tecnológica al derecho del autor y derecho conexos</a>
+    </div>
+</section>
+
+<!-- TÍTULO I -->
+<section class="title-section" id="titulo1">
+    <h2>Título IV – Disposiciones especiales para ciertas obras</h2>
+
+    <div class="accordion">
+        <div class="accordion-header">Capítulo I – Obras audiovisuales</div>
+        <div class="accordion-content">
+            <p>Regula cómo se protegen y se usan legalmente los temas de los primeros tres capítulos, obras audiovisuales, programas de ordenador y bases y sus compilaciones de datos.<br><br>
+En las obras audiovisuales la ley reconoce que participan varios autores, pero establece que el productor también puede sacar provecho económico de la obra y los creadores mantienen sus derechos de autor y sus derechos morales, siempre y cuando la versión de la obra sea la definitiva reciben sus pagos por hacer las obras públicas. También siempre uno de los coautores se niega a terminar su colaboración, no podrá oponerse a que se utilice la parte ya utilizada, aun así él también gozará de los derechos que esta obtenga.<br><br>
+
+Así que, se puede decir que cuando los coautores firman un contrato con el productor, ellos ceden el poder de explotar los derechos económicos de la obra, y así mismo, los autores no pierden sus derechos, ya que esa explotación es remunerada si llega a su etapa final. 
+</p>
+        </div>
+    </div>
+
+    <div class="accordion">
+        <div class="accordion-header">Capítulo II – Programas de ordenador</div>
+        <div class="accordion-content">
+            <p>En los programas de ordenador reciben la misma protección que la obras literarias. La ley protege el código fuente como también el ejecutable y todas sus versiones. Y también se establece que el productor es el dueño de los derechos y puede explotar sus derechos como le convenga. El usuario que compre un programa de manera legal puede usarlo, hacer copia de seguridad, hacer cambios si tiene errores para que funcione de manera correcta, pero no tiene permiso para copiarlo, distribuirlo o usarlo comercialmente sin autorización.<br><br>
+Aquí se defiende los derechos del creador del programa, pero  también habla de los derechos que tiene el usuario y sus prohibiciones. </p>
+        </div>
+    </div>
+    
+    <div class="accordion">
+        <div class="accordion-header">Capítulo III – Bases y compilaciones de datos</div>
+        <div class="accordion-content">
+            <p>Establece que las bases y sus compilaciones están protegidas por derecho de autor siempre que por la selección o disposición muestre creaciones intelectuales, o sea, únicas.</p>
+        </div>
+    </div>
+
+    <div class="ejemplo-box">
+        <h3>Caso práctico</h3>
+
+        <img src="papeles.jpg" alt="Caso Papeles" class="ejemplo-img">
+
+        <p><strong>¿Sabías que el director panameño de “Papeles” tuvo que navegar un mar de derechos para contar la historia más explosiva de Panamá… sin perder el control de su propia obra?</strong></p>
+        <p>
+            Arturo Montenegro dirigió <em>“Papeles”</em> (2024–2025), protagonizada por Carlos Bardem y Megan Montaner, inspirada en el escándalo de los Panamá Papers.
+        </p>
+        <p>
+            En Panamá, la Ley 64 (Art. 19, Título IV, Cap. 1) establece que, si no se negocia expresamente lo contrario, el productor puede conservar los derechos patrimoniales ilimitados de la obra audiovisual.
+        </p>
+        <p>
+            Muchos directores firman contratos estándar sin revisar cláusulas clave y terminan perdiendo regalías derivadas de:
+        </p>
+
+        <ul class="ejemplo-lista">
+            <li>Plataformas de streaming</li>
+            <li>Transmisión en televisión</li>
+            <li>Remakes o adaptaciones</li>
+        </ul>
+    </div>
+
+</section>
+
+<!-- TÍTULO II -->
+<section class="title-section" id="titulo2">
+    <h2>Título VI – Duración del derecho de autor y límites al derecho patrimonial</h2>
+
+    <div class="accordion">
+        <div class="accordion-header">Capítulo II – Límites al derecho patrimonial</div>
+        <div class="accordion-content">
+            <p>Este capítulo nos dice que aunque las obras como libros, canciones o trabajos que tienen dueños, las personas puede utilizarlas sin necesidad de pedir permiso o pagar, porque así lo dice la ley. Así mismo, utilizarlas en casa para fines personales, en actividades educativas, investigaciones, ceremonias para ayudar a personas con discapacidad, siempre que no se obtenga dinero de ello. También permite hacer copias para obras públicas y así mismo citar fragmentos para trabajos, mencionando el autor y la fuente de donde se sacó.<br><br>
+También se permite el uso de fragmentos con fines informativos como en noticias, fragmentos de eventos actuales, trasmitir discursos públicos o que la radios graben material para su transmisión de manera temporal.<br><br>
+
+Aquí el punto está en que se pueden usar obras sin permiso en ciertos casos, pero de manera limitada y justa. No pueden lucrar de estas, deben y respetar los derechos del autor, así cuando se usan deben citar el autor y fuente. Y si estás de exponen en las noticias deben ser expresada sin prejuicios.
+</p>
+        </div>
+    </div>
+
+    <div class="ejemplo-box">
+     <h3>Caso práctico</h3>
+
+        <p><strong>Uso responsable de tesis académicas según la Ley 64 de 2012</strong></p>
+
+        <p>
+            Un caso que refleja la importancia del Capítulo II del Título VI de la Ley 64 de 2012 es el uso de tesis universitarias en trabajos académicos.
+        </p>
+
+        <p>
+            La ley permite que un estudiante cite fragmentos de una tesis para apoyar su investigación, siempre que mencione correctamente el nombre del autor y la fuente. Esto facilita el aprendizaje y el intercambio de conocimiento dentro del ámbito educativo.
+        </p>
+
+        <p>
+            Sin embargo, copiar una tesis completa y presentarla como propia constituye plagio y una violación directa de los derechos del autor.
+        </p>
+
+        <p>
+            Este ejemplo demuestra que la Ley 64 no busca limitar el acceso a la información, sino promover un uso responsable, ético y respetuoso del trabajo intelectual.
+        </p>
+    </div>
+
+
+</section>
+
+<!-- TÍTULO III -->
+<section class="title-section" id="titulo3">
+    <h2>Título XI – Observancia tecnológica al derecho del autor y derechos conexos</h2>
+
+    <div class="accordion">
+        <div class="accordion-header">Capítulo I – Medidas tecnológicas e información electrónica de los derechos</div>
+        <div class="accordion-content">
+            <p>Este título nos habla de los titulares u obras donde el autor tiene la facultad de aplicar o exigir que se implementen mecanismos o bien, dispositivos de autotutelas
+                con el fin de impedir la modificación o comunicación al público por terceros no autorizados, y será señalado como ilícito evadir dichas medidas o autotutelas, salvo orden judicial.<br><br>
+                Al igual que se menciona que actividades de buena fe no infractoras serán lícitas, esto puede incluir a investigadores calificados, o bien, actividades autorizadas por el autor.
+            </p>
+        </div>
+    </div>
+
+    <div class="ejemplo-box">
+        <h3>Caso práctico</h3>
+
+        <img src="pirata.jpg" alt="Caso de piratería" class="ejemplo-img">
+
+        <p><strong>¿Sabías que en Panamá han condenado a personas por violar derechos de autor y derechos conexos… con penas de hasta 6 años de cárcel?</strong></p>
+
+        <p>
+            En 2022, la Fiscalía Especializada en Delitos contra la Propiedad Intelectual condenó a dos personas por infringir la Ley 64, conforme al Título XI – Observancia (Arts. 150 y siguientes).
+        </p>
+
+        <p>
+            En Panamá, conductas como las siguientes pueden dar lugar a procesos penales:
+        </p>
+
+        <ul class="ejemplo-lista">
+            <li>Piratería de música, películas o software.</li>
+            <li>Distribución o reproducción sin autorización del titular.</li>
+            <li>Elusión de medidas tecnológicas de protección (DRM).</li>
+        </ul>
+
+        <p>
+            Estas infracciones no solo generan responsabilidad civil, sino que pueden implicar sanciones penales y penas de prisión conforme al régimen de observancia establecido en la Ley 64 del 2012.
+        </p>
+    </div>
+
+
+</section>
+
+<footer>
+    <div class="footer-container">
+
+        <img src="utp.png" alt="Logo Universidad" class="footer-logo">
+
+        <div class="footer-text">
+            <h3>Universidad Tecnológica de Panamá</h3>
+        </div>
+
+        <img src="fisc.png" alt="Logo Facultad" class="footer-logo">
+
+    </div>
+</footer>
+
+<script>
+const accordions = document.querySelectorAll(".accordion-header");
+
+accordions.forEach(header => {
+    header.addEventListener("click", () => {
+        const content = header.nextElementSibling;
+
+        if(content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            document.querySelectorAll(".accordion-content")
+                .forEach(c => c.style.maxHeight = null);
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+});
+</script>
+
+</body>
+</html>
